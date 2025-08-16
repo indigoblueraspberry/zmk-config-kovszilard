@@ -151,6 +151,51 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        bt_select_disconnect_p0: bt_select_disconnect_p0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_SELECT_DISCONNECT_P0";
+            bindings = <&bt BT_SEL 0>, <&bt BT_DISC 0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        bt_select_disconnect_p1: bt_select_disconnect_p1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_SELECT_DISCONNECT_P1";
+            bindings = <&bt BT_SEL 1>, <&bt BT_DISC 1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        bt_select_disconnect_p2: bt_select_disconnect_p2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_SELECT_DISCONNECT_P2";
+            bindings = <&bt BT_SEL 2>, <&bt BT_DISC 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        bt_select_disconnect_p3: bt_select_disconnect_p3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_SELECT_DISCONNECT_P3";
+            bindings = <&bt BT_SEL 3>, <&bt BT_DISC 3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        bt_select_disconnect_p4: bt_select_disconnect_p4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_SELECT_DISCONNECT_P4";
+            bindings = <&bt BT_SEL 4>, <&bt BT_DISC 4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -185,10 +230,10 @@
 
         media {
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans             &trans           &trans      &kp C_PP
-  &trans        &trans           &trans        &trans        &trans          &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
-  &trans        &bt_clr_clr_all  &trans        &trans        &trans          &trans      &kp C_MUTE         &trans           &trans      &trans
-                                 &trans        &trans        &trans          &trans      &trans             &trans
+  &bt_select_disconnect_p0  &bt_select_disconnect_p1  &bt_select_disconnect_p2  &bt_select_disconnect_p3  &bt_select_disconnect_p4    &trans      &trans             &trans           &trans      &kp C_PP
+  &trans                    &trans                    &trans                    &trans                    &trans                      &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
+  &trans                    &bt_clr_clr_all           &trans                    &trans                    &trans                      &trans      &kp C_MUTE         &trans           &trans      &trans
+                                                      &trans                    &trans                    &trans                      &trans      &trans             &trans
             >;
         };
 
