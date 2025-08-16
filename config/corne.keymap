@@ -142,6 +142,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        bt_clr_clr_all: bt_clr_clr_all {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_CLR_CLR_ALL";
+            bindings = <&bt BT_CLR>, <&bt BT_CLR_ALL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -176,10 +185,10 @@
 
         media {
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans             &trans           &trans      &kp C_PP
-  &trans        &trans        &trans        &trans        &trans          &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
-  &trans        &trans        &trans        &trans        &trans          &trans      &kp C_MUTE         &trans           &trans      &trans
-                              &trans        &trans        &trans          &trans      &trans             &trans
+  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans             &trans           &trans      &kp C_PP
+  &trans        &trans           &trans        &trans        &trans          &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
+  &trans        &bt_clr_clr_all  &trans        &trans        &trans          &trans      &kp C_MUTE         &trans           &trans      &trans
+                                 &trans        &trans        &trans          &trans      &trans             &trans
             >;
         };
 
