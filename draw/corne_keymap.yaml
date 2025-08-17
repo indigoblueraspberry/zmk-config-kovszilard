@@ -31,7 +31,7 @@ layers:
   - ','
   - .
   - /
-  - ESCAPE
+  - {t: hungarian, h: toggle}
   - {t: SPACE, h: num}
   - raise
   - lower
@@ -112,11 +112,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   media:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT, h: '0', s: BT DISC}
+  - {t: BT, h: '1', s: BT DISC}
+  - {t: BT, h: '2', s: BT DISC}
+  - {t: BT, h: '3', s: BT DISC}
+  - {t: BT, h: '4', s: BT DISC}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -133,7 +133,7 @@ layers:
   - NEXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT CLR, s: BT CLR ALL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -222,6 +222,80 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  hungarian:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&td_hu_e'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&td_hu_u'
+  - '&td_hu_i'
+  - '&td_hu_o'
+  - {t: ▽, type: trans}
+  - '&td_hu_a'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: default, h: hungarian_umlaut}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  hungarian_umlaut:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&td_hu_e'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&td_hu_u_umlaut'
+  - '&td_hu_i'
+  - '&td_hu_o_umlaut'
+  - {t: ▽, type: trans}
+  - '&td_hu_a'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: default, h: toggle, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [6, 7]
   k: BACKSPACE
