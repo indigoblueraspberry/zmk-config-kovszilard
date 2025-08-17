@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#define HU_I_ACUTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
 
 &mt { quick-tap-ms = <200>; };
 
@@ -198,11 +199,61 @@
             mods = <(MOD_RSFT)>;
         };
 
+        td_hu_a: td_hu_a {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_A";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&hold_tap_left LEFT_WIN A>, <&kp HU_A_ACUTE>;
+
+        };
+
         td_hu_e: td_hu_e {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_E";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp R>;
+            tapping-term-ms = <220>;
+            bindings = <&kp E>, <&kp HU_E_ACUTE>;
+        };
+
+        td_hu_i: td_hu_i {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_I";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp I>, <&kp HU_I_ACUTE>;
+        };
+
+        td_hu_o: td_hu_o {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_O";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp O>, <&kp HU_O_ACUTE>, <&kp HU_O_UMLAUT>, <&kp HU_O_DOUBLE_ACUTE>;
+        };
+
+        td_hu_o_umlaut: td_hu_o_umlaut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_O_UMLAUT";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp HU_O_UMLAUT>, <&kp HU_O_DOUBLE_ACUTE>;
+        };
+
+        td_hu_u: td_hu_u {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_U";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp U>, <&kp HU_U_ACUTE>, <&kp HU_U_UMLAUT>, <&kp HU_U_DOUBLE_ACUTE>;
+        };
+
+        td_hu_u_umlaut: td_hu_u_umlaut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_U_UMLAUT";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp HU_U_UMLAUT>, <&kp HU_U_DOUBLE_ACUTE>;
         };
     };
 
@@ -265,10 +316,19 @@
 
         hungarian {
             bindings = <
-  &trans          &trans  &td_hu_e  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &kp HU_A_ACUTE  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans          &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                          &to 0     &trans  &trans    &trans  &trans  &trans
+  &trans    &trans  &td_hu_e  &trans  &trans    &trans  &td_hu_u  &td_hu_i  &td_hu_o  &trans
+  &td_hu_a  &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
+  &trans    &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
+                    &to 0     &trans  &trans    &trans  &trans    &trans
+            >;
+        };
+
+        hungarian_umlaut {
+            bindings = <
+  &trans    &trans  &td_hu_e  &trans  &trans    &trans  &td_hu_u_umlaut  &td_hu_i  &td_hu_o_umlaut  &trans
+  &td_hu_a  &trans  &trans    &trans  &trans    &trans  &trans           &trans    &trans           &trans
+  &trans    &trans  &trans    &trans  &trans    &trans  &trans           &trans    &trans           &trans
+                    &to 0     &trans  &trans    &trans  &trans           &trans
             >;
         };
     };
