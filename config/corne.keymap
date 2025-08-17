@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <locale/keys_hu.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <locale/keys_hu.h>
 
 &mt { quick-tap-ms = <200>; };
 
@@ -207,7 +207,7 @@
   &kp Q                      &kp W                      &kp E                          &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P
   &hold_tap_left LEFT_WIN A  &hold_tap_left LEFT_ALT S  &hold_tap_left LEFT_CONTROL D  &hold_tap_left LEFT_SHIFT F  &kp G    &kp H  &hold_tap_right RIGHT_SHIFT J  &hold_tap_right RIGHT_CONTROL K  &hold_tap_right RIGHT_ALT L  &hold_tap_right RIGHT_WIN SEMICOLON
   &kp Z                      &kp X                      &kp C                          &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH
-                                                        &kp ESCAPE                     &lt 4 SPACE                  &mo 1    &mo 2  &kp SPACE                      &lt 5 ENTER
+                                                        &to 6                          &lt 4 SPACE                  &mo 1    &mo 2  &kp SPACE                      &lt 5 ENTER
             >;
         };
 
@@ -253,6 +253,15 @@
   &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &trans  &trans  &trans  &trans
   &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans  &trans  &trans  &trans
                    &trans  &trans  &trans             &trans  &trans  &trans
+            >;
+        };
+
+        hungarian {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &to 0   &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
