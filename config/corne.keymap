@@ -99,6 +99,14 @@
     };
 
     behaviors {
+        hold_tap_layer: hold_tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_LAYER";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&to>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
         hold_tap_left: hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LEFT";
@@ -203,7 +211,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_A";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&hold_tap_left LEFT_WIN A>, <&kp HU_A_ACUTE>;
 
         };
@@ -212,7 +220,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_E";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&kp E>, <&kp HU_E_ACUTE>;
         };
 
@@ -220,7 +228,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_I";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&kp I>, <&kp HU_I_ACUTE>;
         };
 
@@ -228,7 +236,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_O";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&kp O>, <&kp HU_O_ACUTE>, <&kp HU_O_UMLAUT>, <&kp HU_O_DOUBLE_ACUTE>;
         };
 
@@ -236,7 +244,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_O_UMLAUT";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&kp HU_O_UMLAUT>, <&kp HU_O_DOUBLE_ACUTE>;
         };
 
@@ -244,7 +252,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_U";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&kp U>, <&kp HU_U_ACUTE>, <&kp HU_U_UMLAUT>, <&kp HU_U_DOUBLE_ACUTE>;
         };
 
@@ -252,7 +260,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_HU_U_UMLAUT";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <240>;
             bindings = <&kp HU_U_UMLAUT>, <&kp HU_U_DOUBLE_ACUTE>;
         };
     };
@@ -316,10 +324,10 @@
 
         hungarian {
             bindings = <
-  &trans    &trans  &td_hu_e  &trans  &trans    &trans  &td_hu_u  &td_hu_i  &td_hu_o  &trans
-  &td_hu_a  &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
-  &trans    &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
-                    &to 0     &trans  &trans    &trans  &trans    &trans
+  &trans    &trans  &td_hu_e                &trans  &trans    &trans  &td_hu_u  &td_hu_i  &td_hu_o  &trans
+  &td_hu_a  &trans  &trans                  &trans  &trans    &trans  &trans    &trans    &trans    &trans
+  &trans    &trans  &trans                  &trans  &trans    &trans  &trans    &trans    &trans    &trans
+                    &hold_tap_layer 7 0     &trans  &trans    &trans  &trans    &trans
             >;
         };
 
