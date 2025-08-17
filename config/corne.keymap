@@ -197,6 +197,13 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        td_hu_e: td_hu_e {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_HU_E";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp R>;
+        };
     };
 
     keymap {
@@ -258,10 +265,10 @@
 
         hungarian {
             bindings = <
-  &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &kp HU_A_ACUTE  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                          &to 0   &trans  &trans    &trans  &trans  &trans
+  &trans          &trans  &td_hu_e  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &kp HU_A_ACUTE  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans          &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                          &to 0     &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
