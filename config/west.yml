@@ -9,6 +9,8 @@ manifest:
       url-base: https://github.com/mctechnology17
     - name: infely # new entry
       url-base: https://github.com/infely # new entry
+    - name: joelspadin
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -23,5 +25,9 @@ manifest:
       remote: infely # new entry
       revision: main # new entry
       path: modules/zmk/nice-view-battery
+    - name: zmk-locales
+      remote: joelspadin
+      revision: main
+      path: modules/zmk/locales
   self:
     path: config
