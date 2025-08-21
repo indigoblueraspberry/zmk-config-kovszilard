@@ -1,0 +1,53 @@
+/* File: config/boards/shields/corne/corne_left.overlay */
+
+/ {
+    chosen {
+        /* Studio requires selecting a physical layout here */
+        zmk,physical-layout = &corne_left_layout;
+
+        /* Ensure the old matrix-transform isn't active for Studio builds */
+        /delete-property/ zmk,matrix-transform;
+    }
+
+    /* Physical layout for the left half (18 keys: 3x5 + 3 thumbs) */
+    corne_left_layout: physical_layout_left {
+        compatible = "zmk,physical-layout";
+        display-name = "Corne Left (3x5+3)";
+        /* Use the Corne's existing mapping from physical index -> matrix */
+        transform = <&default_transform>;
+
+        /*
+         * keys entries: < &key_physical_attrs  w  h   x   y   r   rx  ry >
+         * Simple evenly-spaced grid for Studio’s preview. Order is row-major
+         * (top->bottom, outer->inner), then thumbs (left->right).
+         */
+
+        keys = <
+          /* Row 0 (top, 5 keys) */
+          &key_physical_attrs 1 1   0   0   0   0   0
+          &key_physical_attrs 1 1  19   0   0   0   0
+          &key_physical_attrs 1 1  38   0   0   0   0
+          &key_physical_attrs 1 1  57   0   0   0   0
+          &key_physical_attrs 1 1  76   0   0   0   0
+
+          /* Row 1 (middle, 5 keys) */
+          &key_physical_attrs 1 1   2  19   0   0   0
+          &key_physical_attrs 1 1  21  19   0   0   0
+          &key_physical_attrs 1 1  40  19   0   0   0
+          &key_physical_attrs 1 1  59  19   0   0   0
+          &key_physical_attrs 1 1  78  19   0   0   0
+
+          /* Row 2 (bottom, 5 keys) */
+          &key_physical_attrs 1 1   4  38   0   0   0
+          &key_physical_attrs 1 1  23  38   0   0   0
+          &key_physical_attrs 1 1  42  38   0   0   0
+          &key_physical_attrs 1 1  61  38   0   0   0
+          &key_physical_attrs 1 1  80  38   0   0   0
+
+          /* Thumbs (3 keys) */
+          &key_physical_attrs 1 1  50  60   0   0   0
+          &key_physical_attrs 1 1  69  60   0   0   0
+          &key_physical_attrs 1 1  88  60   0   0   0
+        >;
+    };
+};
