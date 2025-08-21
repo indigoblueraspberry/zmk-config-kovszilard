@@ -1,0 +1,47 @@
+/* File: config/boards/shields/corne/corne_right.overlay */
+
+/ {
+    chosen {
+        /* Select a physical layout for parity/consistency */
+        zmk,physical-layout = &corne_right_layout;
+
+        /* Ensure matrix-transform is not selected in /chosen for Studio builds */
+        /delete-property/ zmk,matrix-transform;
+    }
+
+    /* Physical layout for the right half (18 keys: 3x5 + 3 thumbs) */
+    corne_right_layout: physical_layout_right {
+        compatible = "zmk,physical-layout";
+        display-name = "Corne Right (3x5+3)";
+        transform = <&default_transform>;
+
+        /* Mirrored grid; order is row-major (top->bottom, inner->outer), then thumbs (right->left) */
+        keys = <
+          /* Row 0 (top, 5 keys) */
+          &key_physical_attrs 1 1   76   0   0   0   0
+          &key_physical_attrs 1 1   57   0   0   0   0
+          &key_physical_attrs 1 1   38   0   0   0   0
+          &key_physical_attrs 1 1   19   0   0   0   0
+          &key_physical_attrs 1 1    0   0   0   0   0
+
+          /* Row 1 (middle, 5 keys) */
+          &key_physical_attrs 1 1   78  19   0   0   0
+          &key_physical_attrs 1 1   59  19   0   0   0
+          &key_physical_attrs 1 1   40  19   0   0   0
+          &key_physical_attrs 1 1   21  19   0   0   0
+          &key_physical_attrs 1 1    2  19   0   0   0
+
+          /* Row 2 (bottom, 5 keys) */
+          &key_physical_attrs 1 1   80  38   0   0   0
+          &key_physical_attrs 1 1   61  38   0   0   0
+          &key_physical_attrs 1 1   42  38   0   0   0
+          &key_physical_attrs 1 1   23  38   0   0   0
+          &key_physical_attrs 1 1    4  38   0   0   0
+
+          /* Thumbs (3 keys) */
+          &key_physical_attrs 1 1   88  60   0   0   0
+          &key_physical_attrs 1 1   69  60   0   0   0
+          &key_physical_attrs 1 1   50  60   0   0   0
+        >;
+    };
+};
