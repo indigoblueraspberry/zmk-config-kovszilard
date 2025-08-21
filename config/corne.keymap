@@ -15,10 +15,7 @@
 &sk { quick-release; };
 
 / {
-    chosen {
-        zmk,physical-layout = &foostan_corne_5col_layout;
-        zmk,layout-transform = &five_column_transform;
-    };
+    chosen { zmk,physical-layout = &five_column_transform; };
 
     combos {
         compatible = "zmk,combos";
