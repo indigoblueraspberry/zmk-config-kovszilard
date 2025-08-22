@@ -281,6 +281,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            label = "DEFAULT";
             bindings = <
   &kp Q                      &kp W                      &kp E                          &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P
   &hold_tap_left LEFT_WIN A  &hold_tap_left LEFT_ALT S  &hold_tap_left LEFT_CONTROL D  &hold_tap_left LEFT_SHIFT F  &kp G    &kp H  &hold_tap_right RIGHT_SHIFT J  &hold_tap_right RIGHT_CONTROL K  &hold_tap_right RIGHT_ALT L  &hold_tap_right RIGHT_WIN SEMICOLON
@@ -290,6 +291,7 @@
         };
 
         raise_layer {
+            label = "RAISE";
             bindings = <
   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
   &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
@@ -299,6 +301,7 @@
         };
 
         lower_layer {
+            label = "LOWER";
             bindings = <
   &kp EXCLAMATION  &kp AT_SIGN     &kp POUND  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
   &trans           &kp UNDERSCORE  &kp MINUS  &kp PLUS    &kp EQUAL      &trans     &trans         &trans        &trans                &kp PIPE
@@ -308,6 +311,7 @@
         };
 
         media {
+            label = "MEDIA";
             bindings = <
   &bt_select_disconnect_p0  &bt_select_disconnect_p1  &bt_select_disconnect_p2  &bt_select_disconnect_p3  &bt_select_disconnect_p4    &trans      &trans             &trans           &trans      &kp C_PP
   &trans                    &trans                    &trans                    &trans                    &trans                      &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
@@ -317,6 +321,7 @@
         };
 
         num_layer {
+            label = "NUM";
             bindings = <
   &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH       &none  &none  &none   &none  &none
   &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK    &none  &none  &none   &none  &none
@@ -326,6 +331,7 @@
         };
 
         fun {
+            label = "FUN";
             bindings = <
   &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans  &trans  &trans  &trans
   &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &trans  &trans  &trans  &trans
@@ -335,6 +341,7 @@
         };
 
         hungarian {
+            label = "HUNGARIAN";
             bindings = <
   &trans    &trans  &td_hu_e                &trans  &trans    &trans  &td_hu_u  &td_hu_i  &td_hu_o  &trans
   &td_hu_a  &trans  &trans                  &trans  &trans    &trans  &trans    &trans    &trans    &trans
@@ -344,6 +351,7 @@
         };
 
         hungarian_umlaut {
+            label = "HUNGARIAN_UMLAUT";
             bindings = <
   &trans    &trans  &td_hu_e  &trans  &trans    &trans  &td_hu_u_umlaut  &td_hu_i  &td_hu_o_umlaut  &trans
   &td_hu_a  &trans  &trans    &trans  &trans    &trans  &trans           &trans    &trans           &trans
