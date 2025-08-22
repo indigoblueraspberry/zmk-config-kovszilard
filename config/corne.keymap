@@ -25,9 +25,11 @@
 &sk { quick-release; };
 
 / {
+    /* Alias the Corne's layout to the generic split_3x5_3 name */
+    split_3x5_3: &foostan_corne_5col_layout {};
+
     chosen {
-        /* Use the Corne's built-in layout to avoid undefined node errors */
-        zmk,physical-layout = &foostan_corne_5col_layout;
+        zmk,physical-layout = &split_3x5_3;
     };
 
     combos {
