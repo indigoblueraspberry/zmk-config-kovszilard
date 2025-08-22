@@ -90,8 +90,8 @@
         { "label": "ALT", "row": 3, "col": 9, "x": 10.52, "y": 3.13 }
       ]
     },
-    "five_column_transform": {
-      "name": "five_column_transform",
+    "default_transform": {
+      "name": "default_transform",
       "layout": [
         { "label": "Q", "row": 0, "col": 1, "x": 0, "y": 1 },
         { "label": "W", "row": 0, "col": 2, "x": 1, "y": 0.33 },
