@@ -25,8 +25,8 @@
 &sk { quick-release; };
 
 / {
-    chosen { 
-        zmk,physical-layout = &foostan_corne_5col_layout;
+    chosen {
+        zmk,physical-layout = &split_3x5_3;
     };
 
     combos {
