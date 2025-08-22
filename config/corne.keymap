@@ -10,6 +10,16 @@
 #include <dt-bindings/zmk/keys.h>
 #define HU_I_ACUTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
 
+// Layer indices for readability
+#define LAYER_DEFAULT 0
+#define LAYER_RAISE 1
+#define LAYER_LOWER 2
+#define LAYER_MEDIA 3
+#define LAYER_NUM 4
+#define LAYER_FUN 5
+#define LAYER_HUNGARIAN 6
+#define LAYER_HUNGARIAN_UMLAUT 7
+
 &mt { quick-tap-ms = <200>; };
 
 &sk { quick-release; };
@@ -275,7 +285,7 @@
   &kp Q                      &kp W                      &kp E                          &kp R                        &kp T    &kp Y  &kp U                          &kp I                            &kp O                        &kp P
   &hold_tap_left LEFT_WIN A  &hold_tap_left LEFT_ALT S  &hold_tap_left LEFT_CONTROL D  &hold_tap_left LEFT_SHIFT F  &kp G    &kp H  &hold_tap_right RIGHT_SHIFT J  &hold_tap_right RIGHT_CONTROL K  &hold_tap_right RIGHT_ALT L  &hold_tap_right RIGHT_WIN SEMICOLON
   &kp Z                      &kp X                      &kp C                          &kp V                        &kp B    &kp N  &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH
-                                                        &to 6                          &lt 4 SPACE                  &mo 1    &mo 2  &kp SPACE                      &lt 5 ENTER
+                                                        &to LAYER_HUNGARIAN                          &lt LAYER_NUM SPACE                  &mo LAYER_RAISE    &mo LAYER_LOWER  &kp SPACE                      &lt LAYER_FUN ENTER
             >;
         };
 
@@ -329,7 +339,7 @@
   &trans    &trans  &td_hu_e                &trans  &trans    &trans  &td_hu_u  &td_hu_i  &td_hu_o  &trans
   &td_hu_a  &trans  &trans                  &trans  &trans    &trans  &trans    &trans    &trans    &trans
   &trans    &trans  &trans                  &trans  &trans    &trans  &trans    &trans    &trans    &trans
-                    &hold_tap_layer 7 0     &trans  &trans    &trans  &trans    &trans
+                    &hold_tap_layer LAYER_HUNGARIAN_UMLAUT LAYER_DEFAULT     &trans  &trans    &trans  &trans    &trans
             >;
         };
 
@@ -338,7 +348,7 @@
   &trans    &trans  &td_hu_e  &trans  &trans    &trans  &td_hu_u_umlaut  &td_hu_i  &td_hu_o_umlaut  &trans
   &td_hu_a  &trans  &trans    &trans  &trans    &trans  &trans           &trans    &trans           &trans
   &trans    &trans  &trans    &trans  &trans    &trans  &trans           &trans    &trans           &trans
-                    &to 0     &trans  &trans    &trans  &trans           &trans
+                    &to LAYER_DEFAULT     &trans  &trans    &trans  &trans           &trans
             >;
         };
     };
@@ -347,8 +357,8 @@
         compatible = "zmk,conditional-layers";
 
         media_layer_activation {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <LAYER_RAISE LAYER_LOWER>;
+            then-layer = <LAYER_MEDIA>;
         };
     };
 };
