@@ -2,8 +2,8 @@
   "id": "corne",
   "name": "Corne",
   "layouts": {
-    "default_transform": {
-      "name": "default_transform",
+    "default_transform_remove": {
+      "name": "default_transform_remove",
       "layout": [
         { "label": "Tab", "row": 0, "col": 0, "x": 0, "y": 0.36 },
         { "label": "Q", "row": 0, "col": 1, "x": 1, "y": 0.36 },
