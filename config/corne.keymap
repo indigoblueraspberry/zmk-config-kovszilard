@@ -15,7 +15,9 @@
 &sk { quick-release; };
 
 / {
-    chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -95,6 +97,12 @@
             key-positions = <17 18>;
             slow-release;
             timeout-ms = <60>;
+        };
+
+        studio_unlock {
+            bindings = <&studio_unlock>;
+            key-positions = <0 35>;
+            timeout-ms = <50>;
         };
     };
 
