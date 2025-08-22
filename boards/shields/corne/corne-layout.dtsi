@@ -1,0 +1,47 @@
+#include <physical_layouts.dtsi>
+
+/
+{
+    foostan_corne_5col_layout: foostan_corne_5col_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "5 Column";
+
+        keys = <&key_physical_attrs 100 100    0 100    0     0     0>
+             , <&key_physical_attrs 100 100  100  33    0     0     0>
+             , <&key_physical_attrs 100 100  200   0    0     0     0>
+             , <&key_physical_attrs 100 100  300  35    0     0     0>
+             , <&key_physical_attrs 100 100  400  50    0     0     0>
+             , <&key_physical_attrs 100 100  800  50    0     0     0>
+             , <&key_physical_attrs 100 100  900  35    0     0     0>
+             , <&key_physical_attrs 100 100 1000   0    0     0     0>
+             , <&key_physical_attrs 100 100 1100  33    0     0     0>
+             , <&key_physical_attrs 100 100 1200 100    0     0     0>
+             , <&key_physical_attrs 100 100    0 200    0     0     0>
+             , <&key_physical_attrs 100 100  100 133    0     0     0>
+             , <&key_physical_attrs 100 100  200 100    0     0     0>
+             , <&key_physical_attrs 100 100  300 135    0     0     0>
+             , <&key_physical_attrs 100 100  400 150    0     0     0>
+             , <&key_physical_attrs 100 100  800 150    0     0     0>
+             , <&key_physical_attrs 100 100  900 135    0     0     0>
+             , <&key_physical_attrs 100 100 1000 100    0     0     0>
+             , <&key_physical_attrs 100 100 1100 133    0     0     0>
+             , <&key_physical_attrs 100 100 1200 200    0     0     0>
+             , <&key_physical_attrs 100 100    0 300    0     0     0>
+             , <&key_physical_attrs 100 100  100 233    0     0     0>
+             , <&key_physical_attrs 100 100  200 200    0     0     0>
+             , <&key_physical_attrs 100 100  300 235    0     0     0>
+             , <&key_physical_attrs 100 100  400 250    0     0     0>
+             , <&key_physical_attrs 100 100  800 250    0     0     0>
+             , <&key_physical_attrs 100 100  900 235    0     0     0>
+             , <&key_physical_attrs 100 100 1000 200    0     0     0>
+             , <&key_physical_attrs 100 100 1100 233    0     0     0>
+             , <&key_physical_attrs 100 100 1200 300    0     0     0>
+             , <&key_physical_attrs 100 100  250 350    0     0     0>
+             , <&key_physical_attrs 100 100  350 350 1500   350   450>
+             , <&key_physical_attrs 100 150  450 325 3000   450   475>
+             , <&key_physical_attrs 100 150  750 325 (-3000) 850   475>
+             , <&key_physical_attrs 100 100  875 350 (-1500) 950   550>
+             , <&key_physical_attrs 100 100  950 350    0     0     0>
+             ;
+    };
+};
